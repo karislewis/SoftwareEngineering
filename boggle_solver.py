@@ -106,6 +106,8 @@ def main():
     mygame = Boggle(grid, dictionary)
     solutions = mygame.getSolution()
 
+
+    #printing the solutions 
   
     print(sorted(solutions))
 
