@@ -5,7 +5,7 @@ class Boggle:
     def __init__(self, grid, dictionary):
         
         self.grid = grid 
-        #making sure no duplicates are added and converting to upper case
+        #making sure no duplicates are added and converting to lower case
         self.dictionary = set(word.lower() for word in dictionary)  
         #getting the length (rows) of the grid
         self.num_rows = len(self.grid)
@@ -43,7 +43,7 @@ class Boggle:
         self.num_cols = len(grid[0]) if grid else 0
 
     def setDictionary(self, dictionary):
-      #making the dictionary items all capitals (makes sure its not case sensitive)
+      #making the dictionary items all lower (makes sure its not case sensitive)
         self.dictionary = set(word.lower() for word in dictionary)  # Case-insensitive
 
     def dfs(self, r, c, current_word, visited):
